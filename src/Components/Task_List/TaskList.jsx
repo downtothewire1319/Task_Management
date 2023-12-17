@@ -2,7 +2,6 @@ import TaskItem from "../Task_Item/TaskItem";
 import Modal from "../Modal/Modal";
 import { useContext } from "react";
 import { TaskContext } from "../../Context/TaskContext";
-import taskIcon from "../../assets/images/empty.png";
 const TaskList = () => {
   const { state } = useContext(TaskContext);
   const { isModalOpen, tasks } = state;
@@ -17,12 +16,7 @@ const TaskList = () => {
     ) : (
       <div>
         <h2>No Task Added Yet!</h2>
-        <img
-          width="200px"
-          style={{ marginTop: "20px" }}
-          src={taskIcon}
-          alt=""
-        />
+        
       </div>
     )),
   };
